@@ -1,7 +1,7 @@
-# Strava-2-Notion (New Notion API)
+# Strava to Notion exporter (New Notion API)
 Import Strava information to Notion.
 
-![Notion Data](/media/notion.png)
+[//]: <> (![Notion Data](/media/notion.png))
 
 # How to use
 
