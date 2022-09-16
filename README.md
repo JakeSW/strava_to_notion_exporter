@@ -1,5 +1,5 @@
 # Strava to Notion exporter (New Notion API)
-Import Strava information to Notion.
+Import Strava activity information to a Notion database.
 
 # How to use
 
