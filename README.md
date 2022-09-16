@@ -21,3 +21,6 @@ The `notion_api_test.py` file is left in to test adding different data to the da
 
 #### Finding Database ID
 Copy the link to your database page that will look like: `https://www.notion.so/<long_hash_1>?v=<long_hash_2>` then choose `<long_hash_1>`, this is the database ID.
+
+#### Libraries
+The HTTP Requests are abstracted away by two helpful libraries: [stravio](https://github.com/sladkovm/stravaio) and [notion-sdk-py](https://github.com/ramnes/notion-sdk-py). This documentation coupled with the official API documentation is useful for debugging and customising.
