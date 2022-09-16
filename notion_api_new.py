@@ -3,7 +3,7 @@ from config import TOKEN_V3
 
 import numpy as np
 
-# You need to allow the integration access to the page***
+# You need to allow the integration access to the page
 
 notion = Client(auth=TOKEN_V3)
 

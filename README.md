@@ -18,3 +18,4 @@ Import Strava activity information to a Notion database. Subsequent uploads use 
 5. `python3 strava_api.py`
 6. For subsequent runs set `All_Data` in `config.py` to `False` and it will only upload your new activities.
   
+The `notion_api_test.py` file is left in to test adding different data to the database. See [Strava API](https://developers.strava.com/docs/reference/) for what other data is taken from the API request

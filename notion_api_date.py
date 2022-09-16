@@ -1,7 +1,7 @@
 from notion_client import Client
 from config import TOKEN_V3, DATABASE_ID
 
-# You need to allow the integration access to the page***
+# You need to allow the integration access to the page
 
 notion = Client(auth=TOKEN_V3)
 
