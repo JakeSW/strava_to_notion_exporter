@@ -34,7 +34,12 @@ properties = {
       "Date": {
         "type": "date",
         "date": { "start": "2021-05-11" }
+      },
+      "Strava Link":{
+        "type": "url",
+        "url": "https://www.strava.com/activities/7776467252"
       }
+      
     }
   
 

@@ -28,6 +28,8 @@ def uploadToNotion(parent, data):
   else:
     power = data.weighted_average_watts
 
+  link = "https://strava.com/activities/"+str(data.id)
+
   properties = {
         "Name": {
           "type": "title",
@@ -56,7 +58,11 @@ def uploadToNotion(parent, data):
         "Date": {
           "type": "date",
           "date": { "start": date }
-        }
+        },
+        "Strava Link":{
+        "type": "url",
+        "url": link
+      }
       }
   
   notion.pages.create(parent = parent, properties=properties)

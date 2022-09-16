@@ -1,7 +1,9 @@
+from datetime import datetime
+from time import strftime
 from stravaio import strava_oauth2
 from stravaio import StravaIO
 
-from config import CLIENT_ID, CLIENT_SECRET, DATABASE_ID
+from config import CLIENT_ID, CLIENT_SECRET, DATABASE_ID, All_Data
 from notion_api_new import uploadToNotion
 
 token = strava_oauth2(client_id=CLIENT_ID, client_secret=CLIENT_SECRET)
@@ -9,18 +11,17 @@ token = strava_oauth2(client_id=CLIENT_ID, client_secret=CLIENT_SECRET)
 # Get Strava Data
 client = StravaIO(access_token=token["access_token"])
 print("Authorised")
-activities = client.get_logged_in_athlete_activities()
-print("Activites fetched")
 
-# compare activitess
-#with open('last.txt', 'r') as file:
-#    recent = file.read().rstrip()
+if All_Data:
+     after_date=0
+else:
+     with open('last.txt', 'r') as file:
+          after_date = file.read().rstrip()
 
-#for i, activity in enumerate(activities):
-#     if str(activity.id) == recent:
-#          last_index = i
-#          break
+activities = client.get_logged_in_athlete_activities(after=after_date)
+print("Activities fetched")
 
+print(activities[-1].id)
 
 # for activity in activities:
 #     print(activity)
@@ -40,10 +41,11 @@ for activity in activities:
      uploadToNotion(parent=parent, data=activity)
      print("Uploaded activity")
 
-# save last id
+# save sync time
 
-last = str(activities[-1].id)
+now = datetime.now()
+after_date = strftime("%Y-%m-%d")
 
 last_file = open("last.txt", "w")
-n = last_file.write('last')
+n = last_file.write(after_date)
 last_file.close()
