@@ -12,6 +12,15 @@ print("Authorised")
 activities = client.get_logged_in_athlete_activities()
 print("Activites fetched")
 
+# compare activitess
+#with open('last.txt', 'r') as file:
+#    recent = file.read().rstrip()
+
+#for i, activity in enumerate(activities):
+#     if str(activity.id) == recent:
+#          last_index = i
+#          break
+
 
 # for activity in activities:
 #     print(activity)
@@ -30,3 +39,11 @@ for activity in activities:
     
      uploadToNotion(parent=parent, data=activity)
      print("Uploaded activity")
+
+# save last id
+
+last = str(activities[-1].id)
+
+last_file = open("last.txt", "w")
+n = last_file.write('last')
+last_file.close()
