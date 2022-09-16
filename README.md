@@ -1,5 +1,5 @@
 # Strava to Notion exporter (New Notion API)
-Import Strava activity information to a Notion database.
+Import Strava activity information to a Notion database. Subsequent uploads use the most recent entry in the notion database to not double sync.
 
 # How to use
 
@@ -8,6 +8,7 @@ Import Strava activity information to a Notion database.
 2. Insert `Client ID` and `Client Secret` into config file.
 3. Create an app through the [Notion API](https://www.notion.so/).
 4. Create a database in notion, copy the ID to config file. Give your notion integration access to the data base (share button).
+5. Add the relevant columns to the database, the default needs Name, Type (select), Length (number), Time (number), Date (date), Power (number), Elevation (number), Strava Link (URL). You can customise these in the `notion_api_new.py` file.
 
 ### How to run
 1. `git clone https://github.com/IVIURRAY/strava2notion.git`
