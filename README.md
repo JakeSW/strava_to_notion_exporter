@@ -11,8 +11,8 @@ Import Strava activity information to a Notion database. Subsequent uploads use 
 5. Add the relevant columns to the database, the default needs Name, Type (select), Length (number), Time (number), Date (date), Power (number), Elevation (number), Strava Link (URL). You can customise these in the `notion_api_new.py` file.
 
 ### How to run
-1. `git clone https://github.com/IVIURRAY/strava2notion.git`
-2. `cd strava2notion`
+1. `git clone https://github.com/jakesw/strava_to_notion_exporter.git`
+2. `cd strava_to_notion_exporter`
 3. create a new environment from `requirements.txt`
 4. add your credentials to `config.py`
 5. `python3 strava_api.py`
