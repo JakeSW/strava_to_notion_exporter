@@ -25,11 +25,11 @@ def most_recent_activity_date(id=DATABASE_ID):
   date = Date['date']
   start_date = date['start']
   start_date = start_date[0:10]
-  print(start_date)
 
   #add a day to not duplicate, may miss double days though
   end_char = int(start_date[-1])+1
   start_date = start_date[0:9]+str(end_char)
+  print("Last date found:")
   print(start_date)
 
   return start_date
