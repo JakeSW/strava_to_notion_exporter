@@ -9,7 +9,7 @@ Inspired by [IVIURRAY](https://github.com/IVIURRAY/strava2notion) and updated fo
 1. Create an App though the [Strava API](https://www.strava.com/settings/api) (I used media/notion_icon.png for the image).
 2. Insert `Client ID` and `Client Secret` into `config.py`.
 3. Create an app through the [Notion API](https://www.notion.so/) (I used media/strava_icon.png for the image). Add your secret ID to `config.py` as `TOKEN_V3`.
-4. Create a database in notion, copy the ID to config file. Give your notion integration access to the data base (share button).
+4. Create a database (create this as a blank database page) in notion, copy the ID to config file. Give your notion integration access to the data base (share button).
 5. Add the relevant columns to the database, the default needs Name, Type (select), Length (number), Time (number), Date (date), Power (number), Elevation (number), Strava Link (URL). You can customise these in the `notion_api_new.py` file.
 
 ### How to run
