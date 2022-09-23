@@ -1,8 +1,6 @@
 from notion_client import Client
 from config import TOKEN_V3
 
-import numpy as np
-
 # You need to allow the integration access to the page
 
 notion = Client(auth=TOKEN_V3)
@@ -21,7 +19,10 @@ def uploadToNotion(parent, data):
 
   date = str(data.start_date_local)
 
-  distance = np.round(data.distance / 1000,2)
+  distance = round(data.distance / 1000,2)
+
+  time = data.moving_time
+  timeh = round(time/3600,2)
 
   if data.weighted_average_watts == None:
     power = 0
@@ -45,7 +46,7 @@ def uploadToNotion(parent, data):
         },
         "Time": {
           "type": "number",
-          "number": data.moving_time
+          "number": timeh
         },
         "Power": {
           "type": "number",

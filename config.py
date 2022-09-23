@@ -7,4 +7,4 @@ TOKEN_V3 = "secret_Rzce3ZURQMkTEcRTcevfEBbiWiGJJLvOHb9PwcuAIqy"
 DATABASE_ID = "1c86c35beb664a5fb3d84f628359f033"
 
 # All data (True) or all data after last sync (False)
-All_Data = True
+All_Data = False
