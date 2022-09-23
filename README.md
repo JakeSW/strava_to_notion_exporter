@@ -1,4 +1,4 @@
-# Strava to Notion exporter (New Notion API)
+# Strava to Notion exporter in Python (New Notion API)
 Import Strava activity information to a Notion database. Subsequent uploads use the most recent entry in the notion database to not double sync.
 
 Inspired by [IVIURRAY](https://github.com/IVIURRAY/strava2notion) and updated for the new Notion API.
